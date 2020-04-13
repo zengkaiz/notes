@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>document</title>
+    </head>
+    <body>
+        <script>
+            class My{
+                constructor(){
+                    this.a = 1
+                }
+            }
+            let obj = new My()
+            let newMap =new WeakMap([[obj,2]])
+            obj = null
+            console.log(newMap)
+            // 弱引用： key只能放对象 他的引用销毁了他也就销毁
+        </script>
+    </body>
+</html>
