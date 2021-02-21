@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>三栏布局</title>
+    <style>
+      body,html{
+          padding:0;
+          margin: 0;
+      }
+      /* 1.flex */
+      /* .container {
+        display: flex;
+      }
+      .left {
+        flex-basis: 200px;
+        background: green;
+      }
+      .right {
+        flex-basis: 200px;
+        background: green;
+      }
+      .main {
+        flex: 1;
+        background: red;
+      } */
+      /* 2.position + margin */
+      
+      .left, .right {
+        position: absolute;
+        top:0;
+        background: green;
+      }
+      .left{ 
+        left:0;
+        width: 200px;
+      }
+      .right {
+        right: 0;
+        width: 200px;
+      }
+      .main {
+        margin: 0 200px;
+        background-color: red;
+      }
+      /* 3.float+ margin */
+      /* .left{
+          float:left;
+          width:200px;
+          background:red;
+      }
+      .right{
+          float:right;
+          width:200px;
+          background:red;
+      }
+      .main{
+          margin:0 200px;
+          background: green;
+      } */
+      .triangle {
+        height: 0;
+        width: 0;
+        border-width: 30px;
+        border-style: solid;
+        border-color: blue transparent transparent transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="right">right</div>
+        <div class="left">left</div>
+        <div class="main">
+          <div class="triangle"></div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

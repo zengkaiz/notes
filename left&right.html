@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <title>左边固定右边自适应的布局</title>
+    <style>
+      /* 1.float+overflow */
+        .content {
+            height: 200px;
+            text-align: left;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background: green;
+            float:left;
+        }
+        .right{
+            height: 200px;
+            background: red;
+            overflow: hidden;
+        }
+        /* 2.float+margin || position+margin */
+        .content {
+            height: 200px;
+            text-align: left;
+        }
+        .left{
+          width: 200px;
+          background: red;
+          position: absolute;
+          /* float: left; */
+        }
+        .right{
+          background: green;
+          margin-left: 200px;
+        }
+        /* 3.flex */
+        .content {
+          height: 200px;
+          display: flex;
+        }
+        .left{
+          width: 200px;
+          background: green;
+        }
+        .right{
+          flex:1;
+          background: red;
+        }
+        /* 4.float+calc */
+        .content {
+          height: 200px;
+        }
+        .left{
+          width: 200px;
+          float:left;
+          background: green;
+        }
+        .right{
+          width: calc(100% - 200px);
+          float: right;
+          background: red;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+        <div class="content">
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </div>
+  </body>
+</html>
